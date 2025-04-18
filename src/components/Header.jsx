@@ -1,10 +1,10 @@
-import React from "react";
-
+// Header.jsx
 function Header() {
     return (
-        <h1 className="text-5xl text-center mb-10" style={{ color: "#1A237E", fontWeight: 900 }}>
-            STUDYLOG
-        </h1>
+        <header className="header">
+            {/* 이거 없애거나 다른 텍스트로 */}
+            {/* <h1>STUDYLOG</h1> */}
+        </header>
     );
 }
 
