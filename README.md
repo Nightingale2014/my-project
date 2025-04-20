@@ -1,12 +1,46 @@
-# React + Vite
+# 📚 STUDYLOG 프로젝트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **검색창 + 태그 입력 + 중앙 정렬** 기능 구현 완료 (2024-04-21)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ 주요 기능
 
-## Expanding the ESLint configuration
+- **검색창 구현**: 사용자 입력을 통한 태그 추가 가능
+- **태그 리스트 관리**: 입력한 태그 삭제 가능
+- **기본 태그 제공**: 수능공부, 자격증준비, 공무원시험 등
+- **중앙 정렬**: 전체 화면 중앙에 정렬하여 보기 편한 UI 구성
+- **돋보기 버튼**: 하얀색 라인형 돋보기 아이콘 적용
+- **반응형**: 검색창과 태그 영역 모두 깔끔한 정렬 유지
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ 기술 스택
+
+- **React.js (Vite 기반)**
+- **CSS (직접 커스터마이징)**
+- **Git & GitHub** 관리
+
+---
+
+## 📷 완성 화면
+
+(스크린샷 넣을 수 있으면 추가! 예:  
+`![](./완성스크린샷.png)`)
+
+---
+
+## 🔥 프로젝트 마무리 멘트
+
+> "팀원들이 함께 도와줘서, 그대로 있던 화면을  
+> 디자인할 수 있게 발전시킬 수 있었습니다.  
+> 이후에 제가 조금 더 UI 정리와 깃 관리까지 맡아서
+> 포기하지 않고 끝까지 노력해 완성해봤습니다!"
+
+---
+
+## 📅 개발 기간
+
+- 2024-04-18 ~ 2024-04-21 (2일)
+
+
