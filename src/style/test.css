@@ -1,64 +1,111 @@
-.search-container {
+/* 페이지 전체 가운데 정렬 */
+.search-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    margin-top: 0;
-}
-
-.title {
-    font-size: 48px;
+    min-height: 100vh; /* 화면 전체 가운데 */
+    flex-direction: column;
+  }  
+  
+  /* STUDYLOG 제목 */
+  .title {
+    font-size: 60px;
     font-weight: bold;
-    color: #1f2a68;
-    margin: 0;
-}
-
-.search-bar-wrapper {
-    margin-top: 20px;
+    color: #1c2a53;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* 검색창과 버튼을 감싸는 박스 */
+  .search-bar-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.search-bar {
+  }
+  
+  /* 검색창 박스 */
+  .search-bar {
     display: flex;
     align-items: center;
-    width: 100%;
-    gap: 8px;
-}
-
-.search-input {
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 600px;
+    flex-wrap: wrap; /* ✅ 줄바꿈 허용 */
+  }
+  
+  /* 검색 입력창 */
+  .search-input {
     flex: 1;
-    padding: 14px 20px;
     border: none;
-    border-radius: 20px;
-    background-color: #f0f0f0;
-    font-size: 16px;
-    color: #333;
+    background: none;
     outline: none;
-    min-width: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-button {
-    padding: 14px 16px;
-    border: none;
-    border-radius: 20px;
-    background-color: #4A5FC1;
-    color: white;
     font-size: 18px;
+    font-weight: 500; /* 🔥 입력 글씨 굵게 */
+  }
+  
+  /* 검색 버튼 */
+  .search-button {
+    background-color: #4263eb;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.tags-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 검색 버튼 안 돋보기 */
+  .search-button svg {
+    stroke: #ffffff;
+    width: 26px;
+    height: 26px;
+  }
+  
+  /* 태그들 전체 묶음 */
+  .tags-wrapper {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-}
+    gap: 10px;
+  }
+  
+  /* 각각의 태그 스타일 */
+  .tag {
+    font-size: 16px;
+    font-weight: 600; /* 🔥 태그 글씨도 굵게 */
+    color: #333;
+  }
+  
+  /* 태그 옆 X버튼 */
+  .remove-tag-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #999;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  /* 화면 전체 완전 중앙 정렬 */
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 방향 가운데 */
+    align-items: center;     /* 가로 방향 가운데 */
+    min-height: 100vh;       /* 화면 전체 채우기 */
+  }
+  
+  .tag-inside {
+    background: none;
+    font-size: 18px; /* 🔥 14px → 18px (조금 더 큼직하게) */
+    font-weight: bold; /* 🔥 굵게 */
+    margin-right: 8px; /* 약간 더 여유 주기 */
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
