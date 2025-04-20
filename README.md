@@ -1,12 +1,29 @@
-# React + Vite
+✨ STUDYLOG 프로젝트
+🛠 구현 기능
+검색창 구현: 사용자가 태그를 입력해 추가 가능
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+태그 리스트 관리: 입력한 태그 삭제 가능
 
-Currently, two official plugins are available:
+기본 태그 제공: 수능공부, 자격증준비, 공무원시험 등 기본 태그 미리 제공
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+중앙 정렬: 전체 화면 중앙에 정렬하여 보기 편한 UI 구성
 
-## Expanding the ESLint configuration
+돋보기 버튼: 하얀색 라인형 돋보기 아이콘 적용
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+반응형 UI: 검색창과 태그 영역 모두 깔끔한 정렬 유지
+
+🛠 기술 스택
+React.js (Vite 기반)
+
+CSS (직접 커스터마이징)
+
+Git & GitHub 관리
+
+🔥 소감
+"팀원들이 함께 도와줘서,
+그대로 있던 화면을 디자인할 수 있게 발전시킬 수 있었습니다.
+이후에 제가 조금 더 UI 정리와 깃 관리까지 
+포기하지 않고 끝까지 노력해 완성해봤습니다!"
+
+📅 개발 기간
+2024-04-18 ~ 2024-04-21 (총 4일)
