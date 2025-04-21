@@ -1,15 +1,11 @@
+import SearchBar from "../components/SearchBar";
 
-import SearchBar from "../components/SearchBar.jsx";
-import StudyList from "../components/StudyList.jsx";
-import Header from "../components/Header.jsx";
-
-
-const test1 = () => {
+function Test1() {
     return (
         <div>
-            <Header/>
-            <SearchBar/>
+            <SearchBar />
         </div>
-    )
+    );
 }
-export default test1;
+
+export default Test1;

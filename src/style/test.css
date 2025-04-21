@@ -1,111 +1,173 @@
-/* 페이지 전체 가운데 정렬 */
 .search-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* 화면 전체 가운데 */
-    flex-direction: column;
-  }  
-  
-  /* STUDYLOG 제목 */
-  .title {
-    font-size: 60px;
-    font-weight: bold;
-    color: #1c2a53;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* 검색창과 버튼을 감싸는 박스 */
-  .search-bar-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* 검색창 박스 */
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f1f1f1;
-    border-radius: 30px;
-    padding: 10px 20px;
-    width: 600px;
-    flex-wrap: wrap; /* ✅ 줄바꿈 허용 */
-  }
-  
-  /* 검색 입력창 */
-  .search-input {
-    flex: 1;
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 500; /* 🔥 입력 글씨 굵게 */
-  }
-  
-  /* 검색 버튼 */
-  .search-button {
-    background-color: #4263eb;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* 검색 버튼 안 돋보기 */
-  .search-button svg {
-    stroke: #ffffff;
-    width: 26px;
-    height: 26px;
-  }
-  
-  /* 태그들 전체 묶음 */
-  .tags-wrapper {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  /* 각각의 태그 스타일 */
-  .tag {
-    font-size: 16px;
-    font-weight: 600; /* 🔥 태그 글씨도 굵게 */
-    color: #333;
-  }
-  
-  /* 태그 옆 X버튼 */
-  .remove-tag-button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: #999;
-    margin-left: 5px;
-    cursor: pointer;
-  }
-  
-  /* 화면 전체 완전 중앙 정렬 */
-  .page-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 세로 방향 가운데 */
-    align-items: center;     /* 가로 방향 가운데 */
-    min-height: 100vh;       /* 화면 전체 채우기 */
-  }
-  
-  .tag-inside {
-    background: none;
-    font-size: 18px; /* 🔥 14px → 18px (조금 더 큼직하게) */
-    font-weight: bold; /* 🔥 굵게 */
-    margin-right: 8px; /* 약간 더 여유 주기 */
-    display: flex;
-    align-items: center;
-    color: #333;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  font-size: 5rem; /* 존재감 확실히 */
+  font-weight: 600; /* 얇지만 탄탄하게 */
+  letter-spacing: 1px; /* 살짝 여유 */
+  color: #001F54; /* 네이비 유지 */
+  margin-bottom: 20px;
+}
+
+
+.search-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px; /* 검색창과 태그 사이 여백 */
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* 기본 테두리 부드러운 회색 */
+  border-radius: 8px 0 0 8px;
+  outline: none; /* 기본 검정색 아웃라인 없애기 */
+  transition: border-color 0.3s ease;
+}
+
+.search-button {
+  padding: 12px;
+  background-color: #001F54;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.tags-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag-button {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  background-color: #001F54; /* 기본 네이비 */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag-button:hover {
+  background-color: #003377; /* hover 시 살짝 진한 네이비 */
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: white; /* 하얀색 테두리 */
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.search-button:active {
+  background-color: #d9d9d9; /* 눌렀을 때 부드러운 회색! */
+}
+
+.search-button:hover {
+  background-color: #003377;
+}
+
+.search-input:focus {
+  border-color: #d9d9d9; /* 포커스(눌렀을 때) 테두리를 부드러운 회색으로! */
+}
+
+.signup-container h2 {
+  color: black;
+  font-size: 2rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 회원가입 버튼 스타일 */
+.signup-link {
+  position: relative; /* 절대 fixed 쓰지마! */
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  color: #2563eb;
+}
+
+/* 로그인 페이지 스타일 */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.login-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #1d4ed8;
+}
+
+.login-button {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  color: #1e40af;
+}
+
+.login-link {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #1e40af;
+}
+
+
