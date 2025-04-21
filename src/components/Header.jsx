@@ -1,22 +1,17 @@
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
+import Header from "../components/Header";
 
 function Home() {
     return (
         <div className="relative min-h-screen">
-
             {/* 오른쪽 상단 로그인/회원가입 버튼 */}
-            <div className="absolute top-6 right-8 flex space-x-4 z-50">
-                <Link to="/login" className="signup-link">로그인</Link>
-                <Link to="/signup" className="signup-link">회원가입</Link>
+            <div className="flex justify-end p-6">
+                <div className="flex space-x-4">
+                    <Link to="/login" className="px-4 py-2 bg-blue-500 text-white rounded">로그인</Link>
+                    <Link to="/signup" className="px-4 py-2 bg-green-500 text-white rounded">회원가입</Link>
+                </div>
             </div>
-
-            {/* 가운데 정렬된 콘텐츠 */}
-            <div className="flex flex-col items-center justify-center min-h-screen">
-                <h1 className="text-5xl font-bold text-blue-900 mb-6">STUDYLOG</h1>
-                <SearchBar/>
-            </div>
-
         </div>
     );
 }
