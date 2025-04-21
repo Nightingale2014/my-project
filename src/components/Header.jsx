@@ -1,19 +1,25 @@
-import { Link } from "react-router-dom";
-import SearchBar from "../components/SearchBar";
-import Header from "../components/Header";
+import { Link } from "react-router-dom"; // 이건 원래 있던 거 유지
 
-function Home() {
+function Header() {
     return (
-        <div className="relative min-h-screen">
-            {/* 오른쪽 상단 로그인/회원가입 버튼 */}
-            <div className="flex justify-end p-6">
-                <div className="flex space-x-4">
-                    <Link to="/login" className="px-4 py-2 bg-blue-500 text-white rounded">로그인</Link>
-                    <Link to="/signup" className="px-4 py-2 bg-green-500 text-white rounded">회원가입</Link>
-                </div>
+        <header className="w-full flex justify-between items-center px-8 py-4 bg-white shadow-md">
+            <div className="text-2xl font-bold">
+                <Link to="/">InterTicket</Link>
             </div>
-        </div>
+
+            {/* 여기다 넣어! */}
+            <h1>Hello GitHub!</h1>
+
+            <div className="flex space-x-4">
+                <Link to="/login" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500">
+                    로그인
+                </Link>
+                <Link to="/signup" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-green-500">
+                    회원가입
+                </Link>
+            </div>
+        </header>
     );
 }
 
-export default Home;
+export default Header;
