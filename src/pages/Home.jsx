@@ -4,7 +4,7 @@ import Header from "../components/Header.jsx";
 
 function Home() {
     return (
-        <div className="relative min-h-screen"> {/* 부모 relative */}
+        <div className=" min-h-screen"> {/* 부모 relative */}
 
         <Header/>
 
