@@ -1,33 +1,42 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Login() {
+    const [form, setForm] = useState({ email: "", password: "" });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("로그인 시도: " + JSON.stringify(form));
+    };
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
-            <h2 className="text-3xl font-bold mb-6">로그인</h2>
-
-            {/* 아이디 입력창 */}
-            <input
-                type="text"
-                placeholder="아이디"
-                className="w-80 p-2 mb-4 border border-gray-300 rounded"
-            />
-
-            {/* 비밀번호 입력창 */}
-            <input
-                type="password"
-                placeholder="비밀번호"
-                className="w-80 p-2 mb-4 border border-gray-300 rounded"
-            />
-
-            {/* 로그인 버튼 */}
-            <button className="w-80 p-2 bg-blue-900 text-white font-bold rounded hover:bg-blue-700 transition">
-                로그인
-            </button>
-
-            {/* 회원가입 링크 */}
-            <Link to="/signup" className="text-blue-700 hover:text-blue-900 font-semibold mt-4">
-                회원이 아니신가요?
-            </Link>
+        <div className="login-container">
+            <h2>로그인</h2>
+            <form onSubmit={handleSubmit} className="login-form">
+                <input
+                    className="login-input"
+                    type="email"
+                    name="email"
+                    placeholder="이메일 입력"
+                    value={form.email}
+                    onChange={handleChange}
+                />
+                <input
+                    className="login-input"
+                    type="password"
+                    name="password"
+                    placeholder="비밀번호 입력"
+                    value={form.password}
+                    onChange={handleChange}
+                />
+                <button type="submit" className="login-button">로그인</button>
+            </form>
+            <Link to="/signup" className="login-link">아직 회원이 아니신가요?</Link>
         </div>
     );
 }

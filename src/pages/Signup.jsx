@@ -1,65 +1,50 @@
-// src/pages/Signup.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Signup() {
-    const [formData, setFormData] = useState({
-        username: "",
-        email: "",
-        password: "",
-    });
+    const [form, setForm] = useState({ name: "", email: "", password: "" });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+        setForm({ ...form, [name]: value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("회원가입 데이터:", formData);
+        alert("회원가입 완료! 🎉");
     };
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-80">
-                <h2 className="text-2xl font-bold mb-6 text-center">회원가입</h2>
-
+        <div className="signup-container">
+            <h2>회원가입</h2>
+            <form onSubmit={handleSubmit} className="login-form">
                 <input
+                    className="login-input"
                     type="text"
-                    name="username"
-                    placeholder="사용자명"
-                    value={formData.username}
+                    name="name"
+                    placeholder="이름 입력"
+                    value={form.name}
                     onChange={handleChange}
-                    className="w-full p-2 mb-4 border rounded"
-                    required
                 />
                 <input
+                    className="login-input"
                     type="email"
                     name="email"
-                    placeholder="이메일"
-                    value={formData.email}
+                    placeholder="이메일 입력"
+                    value={form.email}
                     onChange={handleChange}
-                    className="w-full p-2 mb-4 border rounded"
-                    required
                 />
                 <input
+                    className="login-input"
                     type="password"
                     name="password"
-                    placeholder="비밀번호"
-                    value={formData.password}
+                    placeholder="비밀번호 입력"
+                    value={form.password}
                     onChange={handleChange}
-                    className="w-full p-2 mb-6 border rounded"
-                    required
                 />
-                <button
-                    type="submit"
-                    className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition"
-                >
-                    가입하기
-                </button>
+                <button type="submit" className="login-button">회원가입</button>
             </form>
+            <Link to="/login" className="login-link">이미 회원이신가요?</Link>
         </div>
     );
 }

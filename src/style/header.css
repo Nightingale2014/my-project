@@ -1,20 +1,21 @@
 .header-container {
     display: flex;
     justify-content: flex-end;
-    gap: 16px; /* 로그인/회원가입 간 간격 */
-    padding: 16px; /* 위아래 여백 */
-    background-color: #ffffff; /* 배경색 (필요시 조정) */
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: transparent; /* 여기!! */
 }
 
 .header-link {
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 500;
-    color: #4b5563; /* 기본 텍스트 색상 */
+    color: #001F54;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .header-link:hover {
-    color: #3b82f6; /* hover 시 파란색 (Tailwind의 blue-500 비슷한 색) */
+    color: #003377;
 }

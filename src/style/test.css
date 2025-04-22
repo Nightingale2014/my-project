@@ -81,6 +81,9 @@
 }
 
 body {
+  background-color: white; /* 무조건 흰색 */
+  margin: 0;
+  padding: 0;
   font-family: 'Pretendard', sans-serif;
 }
 
@@ -149,25 +152,31 @@ html, body {
 }
 
 .login-button {
+  padding: 10px;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.125rem;
-  color: #1d4ed8;
-  text-decoration: none;
+  background-color: #001f54; /* 네이비 배경 */
+  color: #ffffff; /* 하얀 글씨 */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-  color: #1e40af;
+  background-color: #003377; /* hover 시 살짝 더 진한 네이비 */
 }
 
-.login-link {
+.signup-link {
+  margin-top: 12px; /* 버튼과 약간 간격 벌리기 */
   font-weight: bold;
-  font-size: 1.125rem;
-  color: #1d4ed8;
+  font-size: 1rem;
+  color: #1d4ed8; /* 파란색 텍스트 */
   text-decoration: none;
 }
 
-.login-link:hover {
-  color: #1e40af;
+.signup-link:hover {
+  color: #2563eb; /* hover 시 진한 파란색 */
 }
 
 .header-container {
