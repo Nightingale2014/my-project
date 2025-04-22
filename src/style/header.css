@@ -2,20 +2,21 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 16px;
     padding: 16px;
-    background-color: transparent; /* 여기!! */
+    gap: 16px;
+    width: 100%;
+    background-color: #001f54; /* 네이비 배경 */
 }
 
 .header-link {
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 500;
-    color: #001F54;
+    color: #ffffff; /* 흰색 텍스트 */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .header-link:hover {
-    color: #003377;
+    color: #93c5fd; /* hover 시 연한 하늘색 */
 }

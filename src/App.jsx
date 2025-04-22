@@ -1,20 +1,23 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Header from './components/Header'; // 필요하면 추가
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
+    const location = useLocation();
+    const hideHeaderRoutes = ["/login", "/signup"];
+
     return (
-        <BrowserRouter>
-            <Header />
+        <>
+            {!hideHeaderRoutes.includes(location.pathname) && <Header />}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
             </Routes>
-        </BrowserRouter>
+        </>
     );
 }
 
-export default App;  // 이게 꼭 있어야 함
+export default App; // <<<< 여기 필수
