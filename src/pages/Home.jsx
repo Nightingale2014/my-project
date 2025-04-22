@@ -4,9 +4,8 @@ import Header from "../components/Header.jsx";
 
 function Home() {
     return (
-        <div className=" min-h-screen"> {/* 부모 relative */}
+        <div className=" justify-between min-h-screen"> {/* 부모 relative */}
 
-        <Header/>
 
             {/* 가운데 정렬된 콘텐츠 */}
             <div className="flex flex-col items-center justify-center min-h-screen">
