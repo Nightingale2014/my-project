@@ -1,61 +1,65 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import bgImage from "../assets/studylog-banner-twilight.jpg"; // assets 경로는 import OK
 
 function Login() {
-    const [form, setForm] = useState({ email: "", password: "" });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setForm({ ...form, [name]: value });
-    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("로그인 시도: " + JSON.stringify(form));
+        alert(`로그인 시도: ${email}`);
     };
 
     return (
-        <div className="background">
-            <div className="login-card">
-                {/* 스터디로그 로고 */}
-                <div className="logo-container">
-                    <img src="/studylog_logo.png" alt="스터디로그 로고" className="logo-image" />
+        <div
+            style={{
+                backgroundImage: `url(${bgImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+            className="flex items-center justify-center min-h-screen px-4"
+        >
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <div className="flex justify-center mb-4">
+                    {/* public 경로일 땐 이렇게 직접 문자열로! */}
+                    <img src="/studylog_logo.png" alt="STUDYLOG 로고" className="h-10" />
                 </div>
-
-                {/* 로그인 폼 */}
-                <form onSubmit={handleSubmit} className="login-form">
+                <form onSubmit={handleSubmit}>
                     <input
-                        className="login-input"
                         type="email"
-                        name="email"
                         placeholder="이메일 입력"
-                        value={form.email}
-                        onChange={handleChange}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full border px-4 py-2 mb-4 rounded"
+                        required
                     />
                     <input
-                        className="login-input"
                         type="password"
-                        name="password"
                         placeholder="비밀번호 입력"
-                        value={form.password}
-                        onChange={handleChange}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full border px-4 py-2 mb-4 rounded"
+                        required
                     />
-                    <button type="submit" className="login-button">
+                    <button
+                        type="submit"
+                        className="w-full bg-[#0c1f4a] text-white py-2 rounded hover:bg-[#0a1a3d]"
+                    >
                         로그인
                     </button>
                 </form>
-
-                {/* 비밀번호 찾기 / 회원가입 */}
-                <div className="login-footer">
-                    <Link to="#">비밀번호 찾기</Link> |
-                    <Link to="/signup">회원가입</Link> |
-                    <Link to="#">아이디(이메일) 찾기</Link>
+                <div className="flex justify-center gap-3 mt-4 text-sm text-[#0c1f4a]">
+                    <Link to="/find-password">비밀번호 찾기</Link>
+                    <span>|</span>
+                    <Link to="/signup">회원가입</Link>
+                    <span>|</span>
+                    <Link to="/find-email">아이디(이메일) 찾기</Link>
                 </div>
-
-                {/* 로그인 상태 유지 */}
-                <div className="login-keep">
-                    <input type="checkbox" id="keepLogin" />
-                    <label htmlFor="keepLogin">로그인 상태 유지</label>
+                <div className="flex items-center mt-4 text-sm text-gray-600 justify-center">
+                    <input type="checkbox" id="keep-login" className="mr-2" />
+                    <label htmlFor="keep-login">로그인 상태 유지</label>
                 </div>
             </div>
         </div>

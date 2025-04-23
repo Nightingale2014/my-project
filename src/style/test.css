@@ -12,17 +12,82 @@ html, body {
   font-family: 'Pretendard', sans-serif;
 }
 
+/* src/style/test.css */
+
 .search-wrapper {
+  width: 100%;
+  min-height: 100vh; /* height 대신 min-height 써야 내용 늘어나도 배경 유지됨 */
+  background-image: url("src/assets/studylog-banner-twilight.jpg"); /* 정확한 경로로 수정 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* 반복 방지 */
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  padding: 2rem; /* 내부 여백 살짝 줘서 터지지 않게 */
 }
 
 .search-container {
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.search-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.search-input {
+  padding: 15px;
+  border: none;
+  outline: none;
+  width: 350px;
+  color: black;
+}
+
+.search-button {
+  background-color: #0c1f4a;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag-button {
+  background-color: #0c1f4a;
+  color: white;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+
 
 .title {
   font-size: 5rem; /* 존재감 확실히 */
